@@ -5,14 +5,20 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.folioreader.FolioReader;
+import com.folioreader.model.HighLight;
+import com.folioreader.model.ReadPosition;
+import com.folioreader.util.OnHighlightListener;
+import com.folioreader.util.ReadPositionListener;
 import com.mkit.ignoreall.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements OnHighlightListener, ReadPositionListener {
 
     private TextView mTextMessage;
+    private FolioReader folioReader;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -44,8 +50,26 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initControls() {
-        FolioReader folioReader = FolioReader.getInstance(getApplicationContext());
+        folioReader = FolioReader.getInstance(getApplicationContext())
+                .setOnHighlightListener(this)
+                .setReadPositionListener(this);
         folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song.epub");
+        findViewById(R.id.btn_assest).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                folioReader.openBook("file:///android_asset/TheSilverChair.epub");
+
+            }
+        });
     }
 
+    @Override
+    public void onHighlight(HighLight highlight, HighLight.HighLightAction type) {
+
+    }
+
+    @Override
+    public void saveReadPosition(ReadPosition readPosition) {
+
+    }
 }
