@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hỏi Ngu 3 - Siêu hại não</string>
+    <string name="app_name">Phớt lờ tất cả</string>
     <string name="str_vui_long_doi">Vui lòng đợi...</string>
     <string name="str_oke">Ok</string>
     <string name="str_cancel">Hủy</string>
@@ -12,4 +12,5 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="str_item">Item</string>
 </resources>

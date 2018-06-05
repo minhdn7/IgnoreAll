@@ -44,8 +44,6 @@ public class HomeActivity extends AppCompatActivity implements OnHighlightListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         initControls();
     }
 
@@ -57,7 +55,7 @@ public class HomeActivity extends AppCompatActivity implements OnHighlightListen
         findViewById(R.id.btn_assest).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                folioReader.openBook("file:///android_asset/TheSilverChair.epub");
+                folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song.epub");
 
             }
         });
