@@ -13,4 +13,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="str_item">Item</string>
+    <string name="str_no_data">Chưa có dữ liệu</string>
 </resources>

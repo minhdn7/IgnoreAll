@@ -7,21 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.HomeActivity">
 
-    <Button android:id="@+id/btn_raw"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Open epub from raw"/>
-    <Button android:id="@+id/btn_assest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@+id/btn_raw"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Open epub assests"/>
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcvDanhSach"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
 
+        <TextView
+            android:background="@color/textColorWhite"
+            android:visibility="gone"
+            android:id="@+id/lo_null"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_no_data"
+            />
+    </FrameLayout>
 
 </RelativeLayout>

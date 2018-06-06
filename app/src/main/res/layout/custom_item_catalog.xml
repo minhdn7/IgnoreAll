@@ -33,6 +33,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/str_item"
+                    android:src="@mipmap/book_4"
                     android:scaleType="fitXY" />
             </LinearLayout>
 
@@ -40,18 +41,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_12sdp"
+                android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/item_ten_danhmuc"
+                    android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="marquee"
                     android:focusable="true"
+                    android:gravity="center"
                     android:focusableInTouchMode="true"
                     android:marqueeRepeatLimit="marquee_forever"
                     android:singleLine="true"
-                    android:maxEms="10"
+                    android:maxEms="12"
                     android:background="@drawable/background_button_blue"
                     android:paddingBottom="@dimen/_6sdp"
                     android:paddingLeft="@dimen/_12sdp"
@@ -60,8 +63,7 @@
                     android:tag="fonts/SFUFuturaBook.TTF"
                     android:textColor="@color/color_white_01_v2"
                     android:textSize="12sp"
-
-                    tools:text="Mua sắm onlien giá rẻ" />
+                    tools:text="Những quấn sách thay đổi cuộc đời" />
 
                 <!--<TextView-->
                     <!--android:id="@+id/item_ten_merchant"-->
@@ -111,6 +113,7 @@
                 android:id="@+id/ln_tichdiem"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1.3">
 
                 <LinearLayout
@@ -160,7 +163,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/item_tieu_de"
+                android:id="@+id/tv_desc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
