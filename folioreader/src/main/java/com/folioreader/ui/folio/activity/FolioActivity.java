@@ -25,6 +25,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.folioreader.Config;
@@ -49,6 +50,11 @@ import com.folioreader.view.FolioToolbarCallback;
 import com.folioreader.view.MediaControllerCallback;
 import com.folioreader.view.MediaControllerView;
 import com.folioreader.view.ObservableWebView;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import org.greenrobot.eventbus.EventBus;
 import org.readium.r2_streamer.model.container.Container;
@@ -83,6 +89,10 @@ public class FolioActivity
     public static final String INTENT_HIGHLIGHTS_LIST = "highlight_list";
     public static final String EXTRA_READ_POSITION = "com.folioreader.extra.READ_POSITION";
 
+    // ads create
+    public AdView mAdView;
+    public InterstitialAd mInterstitialAd;
+    // end
     public enum EpubSourceType {
         RAW,
         ASSETS,
@@ -136,6 +146,45 @@ public class FolioActivity
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setListeners(this);
+        initAds();
+        addEvents();
+    }
+
+    private void addEvents() {
+        findViewById(R.id.btn_close).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAdsInter();
+            }
+        });
+    }
+
+    private void initAds() {
+
+        try {
+
+            mAdView = new AdView(this);
+            mAdView.setAdSize(AdSize.SMART_BANNER);
+            mAdView.setAdUnitId(getString(R.string.str_ad_banner));
+
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getString(R.string.str_ad_inter));
+            mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -410,6 +459,42 @@ public class FolioActivity
                     finish();
                 }
                 break;
+        }
+    }
+
+    public void showAdsInter(){
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+            mInterstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    // Code to be executed when an ad finishes loading.
+                }
+
+                @Override
+                public void onAdFailedToLoad(int errorCode) {
+                    // Code to be executed when an ad request fails.
+                    finish();
+                }
+
+                @Override
+                public void onAdOpened() {
+                    // Code to be executed when the ad is displayed.
+                }
+
+                @Override
+                public void onAdLeftApplication() {
+                    // Code to be executed when the user has left the app.
+                }
+
+                @Override
+                public void onAdClosed() {
+                    // Code to be executed when when the interstitial ad is closed.
+                    finish();
+                }
+            });
+        } else {
+            this.finish();
         }
     }
 }

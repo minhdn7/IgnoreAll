@@ -6,6 +6,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -118,6 +120,21 @@ public class HomeActivity extends BaseActivity implements OnHighlightListener, R
 //                .font(Font.ANDADA)
                 .themeColor(R.color.grey_color)
                 .build();
+
         folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song.epub", config);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+
+        // return true so that the menu pop up is opened
+        return true;
     }
 }

@@ -73,9 +73,9 @@ public class BaseActivity extends AppCompatActivity implements Validator.Validat
     public AdView mAdView;
     public InterstitialAd mInterstitialAd;
     public RewardedVideoAd mRewardedVideoAd;
-    public String ADS_BANNER = "/21617015150/15656900/21701027765";
-    public String ADS_INTER = "/21617015150/15656900/21701027999";
-    public String ADS_REWARD = "/21617015150/15656900/21700816162";
+    public String ADS_BANNER = "ca-app-pub-7343050714013437/3863178496";
+    public String ADS_INTER = "ca-app-pub-7343050714013437/6621489182";
+//    public String ADS_REWARD = "/21617015150/15656900/21700816162";
 //    public String ADS_REWARD = "ca-app-pub-3940256099942544/5224354917";
 //    public String ADS_REWARD = "ca-app-pub-7343050714013437/9093251656";
     private Toast toast;
@@ -115,9 +115,9 @@ public class BaseActivity extends AppCompatActivity implements Validator.Validat
     private void initAds() {
         try {
 
-//            mAdView = findViewById(R.id.adView);
-//            AdRequest adRequest = new AdRequest.Builder().build();
-//            mAdView.loadAd(adRequest);
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
         } catch (Exception e) {
             e.printStackTrace();
         }

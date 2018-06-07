@@ -8,15 +8,15 @@ package com.bossturban.webviewmarker;
 
 public final class R {
     public static final class drawable {
-        public static int text_select_handle_left = 0x7f090098;
-        public static int text_select_handle_right = 0x7f090099;
+        public static int text_select_handle_left = 0x7f090114;
+        public static int text_select_handle_right = 0x7f090115;
     }
     public static final class id {
-        public static int dragLayer = 0x7f0c0047;
-        public static int endHandle = 0x7f0c004b;
-        public static int startHandle = 0x7f0c00c5;
+        public static int dragLayer = 0x7f0c007a;
+        public static int endHandle = 0x7f0c007f;
+        public static int startHandle = 0x7f0c0131;
     }
     public static final class layout {
-        public static int selection_drag_layer = 0x7f0f004f;
+        public static int selection_drag_layer = 0x7f0f005d;
     }
 }
