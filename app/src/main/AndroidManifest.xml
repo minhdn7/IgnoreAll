@@ -6,13 +6,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".app.LineApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".app.LineApplication"
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.activity.StartActivity"
@@ -28,26 +28,26 @@
             android:name=".ui.activity.HomeActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.CustomActionBar"/>
+            android:theme="@style/AppTheme.CustomActionBar" />
         <activity
             android:name="com.folioreader.ui.folio.activity.FolioActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <!-- Cấu hình firebase -->
-        <service android:name="com.mkit.ignoreall.app.service.FirebaseMessagingService">
+        <service android:name=".app.service.FirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.mkit.ignoreall.app.service.FirebaseInstanceIDService">
+        <service android:name=".app.service.FirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <receiver
-            android:name="com.mkit.ignoreall.app.service.NotificationReceiver"
+            android:name=".app.service.NotificationReceiver"
             android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
@@ -55,6 +55,10 @@
             </intent-filter>
         </receiver>
         <!-- end firebase service -->
+        <activity android:name=".ui.activity.MoreAppActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.CustomActionBar" />
     </application>
 
 </manifest>

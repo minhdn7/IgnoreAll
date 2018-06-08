@@ -1,5 +1,7 @@
 package com.mkit.ignoreall.ui.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -136,5 +138,21 @@ public class HomeActivity extends BaseActivity implements OnHighlightListener, R
 
         // return true so that the menu pop up is opened
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.menu_vote:
+                final String appPackageName = getPackageName();
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                return true;
+            case R.id.menu_more_game:
+                startActivity(new Intent(this, MoreAppActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

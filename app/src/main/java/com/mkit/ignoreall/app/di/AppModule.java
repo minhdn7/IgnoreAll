@@ -7,6 +7,7 @@ import com.mkit.ignoreall.app.LineApplication;
 
 import com.mkit.ignoreall.ui.activity.BaseActivity;
 import com.mkit.ignoreall.ui.activity.HomeActivity;
+import com.mkit.ignoreall.ui.activity.MoreAppActivity;
 import com.mkit.ignoreall.ui.fragment.BaseFragment;
 import dagger.Module;
 import dagger.Provides;
@@ -27,8 +28,8 @@ import javax.inject.Singleton;
                 // - view
                 BaseActivity.class,
                 BaseFragment.class,
-                HomeActivity.class
-
+                HomeActivity.class,
+                MoreAppActivity.class
                 //Activity
 
 //        //Fragment
