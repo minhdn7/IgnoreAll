@@ -1,6 +1,8 @@
 package com.mkit.ignoreall.ui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -47,8 +49,20 @@ public class MoreAppAdapter extends ArrayAdapter<MoreAppModel> {
         } else {
             holder = (MoreAppAdapter.ViewHolder) convertView.getTag();
         }
-        if(AppUtil.checkNull(getItem(position))){
+        if(AppUtil.checkNull(getItem(position).getName())){
             holder.btnApp.setText(getItem(position).name);
+            holder.btnApp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(AppUtil.checkNull(getItem(position).getUrl())){
+                        try {
+                            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getItem(position).getUrl())));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
         }
 
 

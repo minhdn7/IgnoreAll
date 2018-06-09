@@ -18,4 +18,6 @@
     <string name="str_ad_banner">ca-app-pub-7343050714013437/3863178496</string>
     <string name="str_ad_inter">ca-app-pub-7343050714013437/6621489182</string>
     <string name="title_activity_more_app"><![CDATA[Ứng dụng & game hay]]></string>
+    <string name="str_reload">Thử lại</string>
+    <string name="str_no_internet">Không thể kết nối được đến hệ thống, mời bạn kiểm tra lại kết nối internet(wifi, 3G), và thử lại!</string>
 </resources>

@@ -10,7 +10,7 @@ public class MoreAppModel {
     @SerializedName("id")
     @Expose
     @Getter @Setter
-    public Integer id;
+    public String id;
 
     @SerializedName("name")
     @Expose
@@ -27,16 +27,19 @@ public class MoreAppModel {
     @Getter @Setter
     public String image;
 
-    public MoreAppModel(Integer id, String name, String url) {
+    public MoreAppModel(String id, String name, String url) {
         this.id = id;
         this.name = name;
         this.url = url;
     }
 
-    public MoreAppModel(Integer id, String name, String url, String image) {
+    public MoreAppModel(String id, String name, String url, String image) {
         this.id = id;
         this.name = name;
         this.url = url;
         this.image = image;
+    }
+
+    public MoreAppModel() {
     }
 }

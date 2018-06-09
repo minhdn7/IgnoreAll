@@ -16,7 +16,7 @@ public class LineApplication extends MultiDexApplication {
     @Getter
     private String baseUrl;
     public static final String apiBaseUrl = "http://112.213.94.52:8338/";
-
+    public static final String apiFireBaseUrl = "https://book-app-61f91.firebaseio.com/";
     private static GoogleAnalytics analytics;
     private static Tracker tracker;
     public static GoogleAnalytics analytics() {

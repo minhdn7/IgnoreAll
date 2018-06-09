@@ -95,13 +95,6 @@ public class HomeActivity extends BaseActivity implements OnHighlightListener, R
         folioReader = FolioReader.getInstance(getApplicationContext())
                 .setOnHighlightListener(this)
                 .setReadPositionListener(this);
-//        findViewById(R.id.btn_assest).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song.epub");
-//
-//            }
-//        });
     }
 
     @Override
