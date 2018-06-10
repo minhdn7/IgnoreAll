@@ -21,6 +21,7 @@ import com.folioreader.model.HighLight;
 import com.folioreader.model.ReadPosition;
 import com.folioreader.util.OnHighlightListener;
 import com.folioreader.util.ReadPositionListener;
+import com.google.android.gms.ads.AdListener;
 import com.mkit.ignoreall.R;
 import com.mkit.ignoreall.app.model.CatalogModel;
 import com.mkit.ignoreall.ui.adapter.CatalogAdapter;
@@ -116,13 +117,9 @@ public class HomeActivity extends BaseActivity implements OnHighlightListener, R
                 .themeColor(R.color.grey_color)
                 .build();
 
-        folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song.epub", config);
+        folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song.epub");
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -146,6 +143,64 @@ public class HomeActivity extends BaseActivity implements OnHighlightListener, R
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    boolean doubleBackToExitPressedOnce = false;
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            if(isConnectedNetwork()){
+                showAdsInterExit();
+            }else {
+                dialogExit();
+            }
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        showToast("Nhấn 2 lần để thoát");
+
+        new android.os.Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
+
+    private void showAdsInterExit() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+            mInterstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    // Code to be executed when an ad finishes loading.
+                    dialogExit();
+                }
+
+                @Override
+                public void onAdFailedToLoad(int errorCode) {
+
+                    finish();
+                }
+
+                @Override
+                public void onAdOpened() {
+                    // Code to be executed when the ad is displayed.
+                }
+
+                @Override
+                public void onAdLeftApplication() {
+                    // Code to be executed when the user has left the app.
+                }
+
+                @Override
+                public void onAdClosed() {
+                    // Code to be executed when when the interstitial ad is closed.
+                    dialogExit();
+                }
+            });
         }
     }
 }
