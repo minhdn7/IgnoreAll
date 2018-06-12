@@ -26,7 +26,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 
     private static final String TAG = "FirebaseMsgService";
     private NotificationUtils notificationUtils;
-
+    private TinyDB tinyDB;
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         if (remoteMessage == null) return;
@@ -69,8 +69,8 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
             Intent intent = new Intent(getApplicationContext(), StartActivity.class);
             Random rand = new Random();
             int notificationID = rand.nextInt(500) + 1;
-            TinyDB tinyDB = new TinyDB(getApplicationContext());
-            tinyDB.putString(ConfigNotification.NOTIFICATION_DATA, json.toString());
+            tinyDB = new TinyDB(getApplicationContext());
+            tinyDB.putString("NotificationData", json.toString());
             intent.putExtra(ConfigNotification.NOTIFICATION_DATA, json.toString());
             intent.putExtra(ConfigNotification.NOTIFICATION_TITLE, title);
             intent.putExtra(ConfigNotification.NOTIFICATION_MESAGE, message);
@@ -84,7 +84,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
     private void handleNotificationNoData(String title, String message) {
 
         try {
-            //String chat_id = json.getString("chat_id");
+
             Intent intent = new Intent(getApplicationContext(), StartActivity.class);
             Random rand = new Random();
             int notificationID = rand.nextInt(500) + 1;
