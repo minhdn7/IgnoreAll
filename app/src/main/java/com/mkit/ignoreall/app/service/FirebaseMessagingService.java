@@ -8,6 +8,7 @@ import android.util.Log;
 
 import com.google.firebase.messaging.RemoteMessage;
 import com.mkit.ignoreall.app.utils.NotificationUtils;
+import com.mkit.ignoreall.domain.repository.TinyDB;
 import com.mkit.ignoreall.ui.activity.StartActivity;
 import com.mkit.ignoreall.app.utils.ConfigNotification;
 
@@ -68,6 +69,8 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
             Intent intent = new Intent(getApplicationContext(), StartActivity.class);
             Random rand = new Random();
             int notificationID = rand.nextInt(500) + 1;
+            TinyDB tinyDB = new TinyDB(getApplicationContext());
+            tinyDB.putString(ConfigNotification.NOTIFICATION_DATA, json.toString());
             intent.putExtra(ConfigNotification.NOTIFICATION_DATA, json.toString());
             intent.putExtra(ConfigNotification.NOTIFICATION_TITLE, title);
             intent.putExtra(ConfigNotification.NOTIFICATION_MESAGE, message);
