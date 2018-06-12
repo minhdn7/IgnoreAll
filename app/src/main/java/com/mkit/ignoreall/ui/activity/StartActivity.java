@@ -30,6 +30,8 @@ public class StartActivity extends AppCompatActivity {
                     finish();
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(json.getString("url").trim())));
                     return;
+                }else {
+
                 }
             }
         } catch (JSONException e) {
