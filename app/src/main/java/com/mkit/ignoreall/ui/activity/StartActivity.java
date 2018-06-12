@@ -20,6 +20,7 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FirebaseMessaging.getInstance().subscribeToTopic("IgnoreAll");
         FirebaseMessaging.getInstance().subscribeToTopic("BookApp");
+        FirebaseMessaging.getInstance().subscribeToTopic("Test");
         setContentView(R.layout.activity_main);
         handleNotification();
         try {
@@ -28,6 +29,7 @@ public class StartActivity extends AppCompatActivity {
                 if(json.getString("type").equals("share") && !json.getString("url").trim().equals("")){
                     finish();
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(json.getString("url").trim())));
+                    return;
                 }
             }
         } catch (JSONException e) {

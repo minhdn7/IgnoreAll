@@ -117,7 +117,7 @@ public class HomeActivity extends BaseActivity implements OnHighlightListener, R
                 .themeColor(R.color.grey_color)
                 .build();
 
-        folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song.epub");
+        folioReader.openBook("file:///android_asset/phot_lo_tat_ca_bo_di_ma_song_2.epub");
     }
 
 

@@ -1,29 +1,29 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
-INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
-INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
-INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
-INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
-INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
-INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
+INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:1-4:12
 	package
-		ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:70-108
-		INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
-		INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
+		ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:70-108
+		INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:133-160
-		INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
-		INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
+		ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:133-160
+		INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:109-132
-		INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
-		INJECTED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
+		ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:2:109-132
+		INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
+		INJECTED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:3:3-70
+ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:3:3-70
 	android:targetSdkVersion
-		ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:3:39-68
+		ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:3:39-68
 	android:minSdkVersion
-		ADDED from D:\android project 2018\IgnoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:3:13-38
+		ADDED from D:\Android_project\read ebook\ignoreAll\IgnoreAll\webViewMarker\src\main\AndroidManifest.xml:3:13-38
